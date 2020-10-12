@@ -91,7 +91,7 @@ function isEven(a) {
  *
  */
 function concatString(a, b) {
-	console.log(a.concat(b));
+	return(a.concat(b));
 }
 
 module.exports = {
