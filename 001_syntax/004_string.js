@@ -13,11 +13,7 @@ function length(str) {
  */
 
 function lengthIsEven(str) {
-	if(str.length % 2 ===1){
-		return false;
-	} else {
-		return true;
-	};
+	return str.length % 2 === 0
 }
 
 /**
@@ -26,7 +22,7 @@ function lengthIsEven(str) {
  */
 
 function firstChar(str) {
-	return str.charAt(0);
+	return str[0];
 }
 
 /**
@@ -45,7 +41,7 @@ function lastChar(str) {
  */
 
 function substring(str, a, b) {
-	return str.substring(b,-a);
+	return str.substring(a -1, b);
 }
 
 /**

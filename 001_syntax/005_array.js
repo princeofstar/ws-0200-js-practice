@@ -37,16 +37,14 @@ function getDays() {
  *    [], 5 => false
  *
  */
-
 function findNum(array, num) {
-	const exists = array.includes(num);
-	if(exists){
-		return true;
-	}else{
-		return false;
-	}
+   for (let i = 0; i < array.length; i++) {
+     if (array[i] === num) {
+        return true
+     }
+   }
+   return false
 }
-
 /**
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
  *
@@ -58,15 +56,14 @@ function findNum(array, num) {
  */
 
 function isDuplicate(array) {
-	const getDuplicateValues = ([...array]) => {
-  return array.filter((value, index, self) => self.indexOf(value) === index && self.lastIndexOf(value) !== index);
-}
-    if(getDuplicateValues){
-   		return true;
-    }else {
-    	return false;
+  for(let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] === array[j]) {
+        return true
+      }
     }
-
+  }
+  return false
 }
 
 module.exports = {

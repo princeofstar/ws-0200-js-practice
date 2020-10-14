@@ -80,10 +80,7 @@ function remainderTwoArgs(a) {
  *
  */
 function isEven(a) {
-	if( ( a % 2 ) == 0 ) {
-		return true;
-	}
-	return false;
+	return a % 2 === 0
 }
 
 /**
