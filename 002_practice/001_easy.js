@@ -12,6 +12,11 @@
  */
 
 function length(str) {
+  let length = 0;
+  while(str[length]) {
+    length++;
+  }
+  return length
 }
 
 /**
@@ -26,7 +31,13 @@ function length(str) {
  *
  */
 function reverse(str) {
+  let reversed = ''
+  for(let i = str.length - 1; i >= 0; i--) {
+    reversed = reversed + str.slice(i, i + 1)
+  }
+  return reversed
 }
+
 
 /**
  *  指定された文字列の位置を返却
